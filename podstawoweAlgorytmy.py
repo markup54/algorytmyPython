@@ -48,3 +48,17 @@ for litera in zbiorLiter:
         teLitery.append(litera)
 
 print(teLitery,maks)
+
+#wczytaj liczbę i sprawdź czy jest liczbą pierwszą
+print("podaj liczbę")
+liczba=int(input())
+def czyPierwsza (liczba):
+    for i in range(2,int(liczba**0.5+1)+1):
+        if liczba % i == 0:
+            return False
+    return True
+
+if czyPierwsza(liczba):
+    print(liczba,"jest pierwsza")
+
+#wypisz wszystkie liczby pierwsze mniejsze od liczby wczytanej
