@@ -62,3 +62,26 @@ if czyPierwsza(liczba):
     print(liczba,"jest pierwsza")
 
 #wypisz wszystkie liczby pierwsze mniejsze od liczby wczytanej
+pierwsze1 =[1 for i in range(liczba+1)]
+pierwsze2 = []
+for i in range(liczba+1):
+    pierwsze2.append(1)
+pierwsze1[0]=0
+pierwsze1[1]=0
+for i in range(2,liczba+1): #zlozoność na pierwiastek
+    if pierwsze1[i] == 1:
+        for k in range(2*i,liczba+1,i):
+            pierwsze1[k]=0
+
+
+for i in range(liczba+1):
+    if pierwsze1[i] == 1:
+        print(i)
+
+print("podaj dwie liczby")
+
+a=int(input())
+b=int(input())
+while b!=0:
+    a,b=b,a%b
+print(a)
